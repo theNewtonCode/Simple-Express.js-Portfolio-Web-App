@@ -29,7 +29,8 @@ post_router.post('/contact', (req,res)=>{
                 console.error(err);
                 return;
             }
-            res.send('Received Your Info, will be contacting soon!');
+            // res.send('Received Your Info, will be contacting soon!');
+            res.redirect('/contact?success=true');
             });
     });
 });

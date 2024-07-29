@@ -1,0 +1,51 @@
+/* Additional styles for Contact page */
+.contact {
+    padding: 50px;
+    background: #222;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: auto;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    background: #444;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #ffdb00;
+    color: #333;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #e6c400;
+}

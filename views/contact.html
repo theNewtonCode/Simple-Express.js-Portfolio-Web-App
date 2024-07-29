@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <header class="header">
@@ -12,21 +12,34 @@
     </header>
     
     <section class="contact">
-        <h2>Get in Touch</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="contact-content">
+            <h2>Get in Touch</h2>
+            <form id="contact-form" action="/contact" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email">
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <footer class="footer">
-        <a href="index.html">Home</a>
-        <a href="achievements.html">Achievements</a>
+        <a href="/">Home</a>
+        <a href="/achievements">Achievements</a>
     </footer>
+
+    <script>
+        // Check if the URL has a 'success' query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success')) {
+            alert('Your message has been sent successfully!');
+        }
+    </script>
 </body>
 </html>
