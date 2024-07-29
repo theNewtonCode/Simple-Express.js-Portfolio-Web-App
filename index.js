@@ -4,12 +4,11 @@ const app = express();
 
 const port = 3000;
 
-// app.use(express.json());
-// app.use(express.text());
+// app.use(express.json()); //parses json type sent data
+app.use(express.urlencoded({extended:true})); //for parsing form data to json
 app.use(express.static('public'));
 
 app.use('/', require(path.join(__dirname, 'routes/app_get')));
-
 app.use('/', require(path.join(__dirname, 'routes/app_post')));
 
 app.listen(port, () => {
